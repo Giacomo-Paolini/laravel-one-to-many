@@ -10,6 +10,6 @@ class Type extends Model
     use HasFactory;
 
     public function post() {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Project::class);
     }
 }
