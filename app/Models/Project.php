@@ -13,5 +13,10 @@ class Project extends Model
         "title",
         "content",
         "image",
+        "type_id"
     ];
+
+    public function category() {
+        return $this->belongsTo(Category::class);
+    }
 }

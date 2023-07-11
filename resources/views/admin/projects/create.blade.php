@@ -22,6 +22,14 @@
             <label for="title">Titolo</label>
             <input type="text" name="title" id="title" value="{{ old("title") }}" class="form-control mb-4">
 
+            <label for="type_id">Type</label><br>
+            <select class="form-control mb-4" name="type_id" id="type_id">
+                <option value="" selected>-- Seleziona un type --</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}" {{ old("type_id") == $type->id ? "selected" : "" }}>{{ $type->name }}</option>
+                @endforeach
+            </select><br>
+
             <label for="content">Contenuto</label>
             <textarea name="content" id="content" cols="30" rows="10" class="form-control mb-4">{{ old("content") }}</textarea>
 
