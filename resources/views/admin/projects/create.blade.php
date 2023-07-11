@@ -24,7 +24,7 @@
 
             <label for="type_id">Type</label><br>
             <select class="form-control mb-4" name="type_id" id="type_id">
-                <option value="" selected>-- Seleziona un type --</option>
+                <option value="" selected disabled>-- Seleziona un type --</option>
                 @foreach ($types as $type)
                     <option value="{{ $type->id }}" {{ old("type_id") == $type->id ? "selected" : "" }}>{{ $type->name }}</option>
                 @endforeach
